@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+
 }
 
 *, *:before, *:after {
@@ -8,161 +9,128 @@ html {
 
 body{
     font-family: 'Karla', sans-serif;
-    min-height: 100vh;
     font-size: 16px;
-    background-color: hsl(218, 22%, 67%);
-}
-
-.corte{
-    display: block;
+    background-color: hsl(204, 43%, 93%);
 }
 
 .main{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 0 5%;
 }
 
 .container{
-    width: 750px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.header{
-    background-color: white;
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-    -webkit-box-shadow: 1px 1px 13px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 13px -5px rgba(0,0,0,0.75);
-    box-shadow: 1px 1px 13px -5px rgba(0,0,0,0.75);
-}
-
-.header__title{
-    margin-left: 50px;
-    color: hsl(179, 62%, 43%);
-}
-
-.header__ofert{
-    margin-left: 50px;
-    color: hsl(71, 73%, 54%);
-    font-weight: 700;
-}
-
-.header__text{
-    margin-left: 50px;
-    margin-bottom: 2rem;
-}
-
-.subscription{
-    background-color: hsl(179, 61%, 38%);
-    color: white;
-    width: 50%;
-    border-radius: 0 0 0 5px;
-}
-
-.subscription__title{
-    margin-left: 50px;
-}
-
-.subscription__ofert{
-    margin-left: 50px;
- 
-}
-
-.ofert__dolar{
-    font-size: 35px;
-}
-
-.subscription__text{
-    margin-left: 50px;
-}
-
-.subscription__button{
-    border: none;
-    margin-left: 50px;
-    width: 250px;
-    height: 40px;
-    background-color: hsl(71, 73%, 54%);
-    color: white;
+    width: 670px;
     border-radius: 5px;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 35px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px 0 black;
 }
 
 
-.us{
+.section__white{
+    width: 100%;
+    background-color: white;
+}
+
+.darkgreen,
+.greenlight{
     width: 50%;
-    background-color: hsl(179, 62%, 45%);
     color: white;
-    border-radius: 0 0 5px 0;
 }
 
-.us__title{
-    margin-left: 50px;
+.section__white,
+.darkgreen,
+.greenlight{
+    padding: 20px 5%;
 }
 
-.us__text{
-    margin-left: 50px;
-    width: 220px;
+.section__white .section__white__title{
+    color: hsl(179, 62%, 43%);
+    font-size: 25px;
 }
 
-@media only screen and (max-width: 610px) {
+.section__white .section__white__subtitle{
+    color: hsl(71, 73%, 54%);
+    font-size: 17px;
+}
 
-    .header{
-        text-align: center;
+.section__white .section__white__paragraph{
+    color: hsl(204, 43%, 93%);
+    color: darkgray;
+    font-weight: 400;
+}
+
+.darkgreen{
+    background-color: rgb(0, 143, 143);
+}
+
+.darkgreen .darkgreen__title,
+.greenlight .greenlight__title{
+    font-size: 18px;
+    margin: 0;
+}
+
+.darkgreen .darkgreen__price{
+    font-size: 30px;
+    margin: 20px 0 0;
+}
+
+.darkgreen .darkgreen__price span{
+    font-size: initial;
+    color: hsl(205, 19%, 82%);  
+}
+
+.darkgreen .darkgreen__paragraph{
+    margin: 10px 0 20px;
+}
+
+.darkgreen .darkgreen__button{
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    color: inherit;
+    padding: 15px 90px;
+    font-weight: 700;
+    box-shadow: 0 1px 2px 0 black;
+    border-radius: 5px;
+    transition: transform .5s;
+}
+
+.darkgreen .darkgreen__button:hover{
+    transform: scale(1.1);
+    transform: .5s;
+}
+
+.greenlight{
+    background-color: rgb(15, 170, 170);
+}
+
+.greenlight .greenlight__paragraph{
+    color: hsl(204, 43%, 93%);
+    width: 75%;
+}
+
+@media only screen and (max-width: 690px){
+
+    .container{
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin: 20px 0;
     }
 
-    .header__title{
-        margin-left: 0;
-    }
-
-    .header__ofert{
-        margin-left: 0;
-    }
-
-    .header__text{
-        margin-left: 0;
-        padding: 0 10px;
-    }
-
-    .subscription{
+    .darkgreen,
+    .greenlight{
+        width: 50%;
         width: 100%;
-        text-align: center;
-    }
-    .subscription__title{
-        margin-left: 0;
     }
 
-    .subscription__ofert{
-        margin-left: 0;
+    .darkgreen__button{
+        pointer-events: none;
     }
 
-    .subscription__text{
-        margin-left: 0;
-    }
-
-    .subscription__button{
-        margin-left: 0;
-    }
-
-    .us{
-        width: 100%;
-        text-align: center;
-    }
-
-    .us__title{
-        margin-left: 0;
-        margin-bottom: 0;
-    }
-
-    .us__text{
-        margin-top: 0;
-        margin-left: 0;
-        width: auto;
-        padding: 20px;
-    }
-
-  }
+   
+}
